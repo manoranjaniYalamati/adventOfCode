@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ADC1 {
+public class AOC1 {
 
     public int getDiffSum(List<Integer> list1, List<Integer> list2) {
         List<Integer> sortedList1 = list1.stream().sorted().toList();
