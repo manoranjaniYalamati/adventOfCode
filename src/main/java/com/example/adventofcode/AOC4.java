@@ -86,16 +86,14 @@ public class AOC4 {
         int count = 0;
         int rows = puzzle.length;
         int cols = puzzle[0].length;
-        boolean[][] visited = new boolean[rows][cols]; // Track visited cells
 
         // Iterate over each cell to look for 'A' (the center of X-MAS)
         for (int i = 1; i < rows - 1; i++) { // Avoid top and bottom rows
             for (int j = 1; j < cols - 1; j++) { // Avoid left and right columns
-                if (puzzle[i][j] == 'A' && !visited[i][j]) {
+                if (puzzle[i][j] == 'A') {
                     // Check if this 'A' can be the center of an X-MAS pattern
                     if (isXMAS(puzzle, i, j)) {
                         count++;
-                        visited[i][j] = true;
                     }
                 }
             }
